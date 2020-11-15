@@ -28,7 +28,7 @@ This command tells you the current directory you're in. It should probably say s
 ```bash
 cd ..
 ```
-and then the "pwd" command again until you get to a point where the terminal tells you the directory you are in is somewhat like /home/user. If this is all confusing for you, try watching this video to get to the desktop directory: https://www.youtube.com/watch?v=FTTr2bjI2UM.
+and then the "pwd" command again until you get to a point where the terminal tells you the directory you are in is somewhat like /home/user. After you get to that, just try typing "cd Desktop" again. If this is all confusing for you, try watching this video to get to the desktop directory: https://www.youtube.com/watch?v=FTTr2bjI2UM.
 
 After you finish getting to the correct directory, the next step is choosing the correct script.
 
