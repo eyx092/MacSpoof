@@ -97,4 +97,4 @@ Credits (Can also be found in credits.txt):
 
 All bash scripts: eyx092
 
-The mac address generator: Russ on Stack Overflow (https://stackoverflow.com/questions/8484877/mac-address-generator-in-python)
+The mac address generator: Based off of a script from Russ on Stack Overflow (https://stackoverflow.com/questions/8484877/mac-address-generator-in-python)
