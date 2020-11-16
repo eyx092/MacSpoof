@@ -1,7 +1,7 @@
 # MacSpoof
 A dumb repository where I tell you how to spoof your mac address.
 
-So step one is figuring out what operating system you have, which should be pretty easy. (This repository doesn't work with Windows, however if you need a guide to changing your mac address for windows check out this post from gPost: https://www.groovypost.com/howto/change-mac-address-windows-10-why/) If you're using linux, you can just go down to the next line. If you're using MacOS, scroll down a bit and you should see a guide for MacOS users.
+So step one is figuring out what operating system you have, which should be pretty easy. (This repository doesn't work with Windows, however if you need a guide to changing your mac address for Windows check out this post from gPost: https://www.groovypost.com/howto/change-mac-address-windows-10-why/) If you're using linux, you can just go down to the next line. If you're using MacOS, scroll down a bit and you should see a guide for MacOS users.
 
 Linux users:
 
