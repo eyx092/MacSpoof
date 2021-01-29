@@ -5,7 +5,7 @@ So step one is figuring out what operating system you have, which should be pret
 
 Windows users:
 
-The second step is finding the driver number of your network card. This can be done using the Registry Editor on Windows. When you get into the Registry Editor, go to this path: `HKEY_LOCAL_MACHINESYSTEMCurrentControlSetControlClass{4D36E972-E325-11CE-BFC1-08002BE10318}`. Under this path, there should be a bunch of folders with numbers on them. Click each one until you find the folder for your network card. Once you do that, change the part of the command in the powershell script that has been highlighted with stars below to match the network driver number: 
+The second step is finding the driver number of your network card. This can be done using the Registry Editor on Windows. When you get into the Registry Editor, go to this path: `HKEY_LOCAL_MACHINESYSTEMCurrentControlSetControlClass{4D36E972-E325-11CE-BFC1-08002BE10318}`. Under this path, there should be a bunch of folders with numbers on them. Click each one until you find the folder for your network card. Once you do that, change the part of the command in the powershell script that has been highlighted with stars below to match the network driver number (the number of the folder in which you found your network card): 
 
 `_reg add HKEY_LOCAL_MACHINESYSTEMCurrentControlSetControlClass{4D36E972-E325-11CE-BFC1-08002BE10318}_**0004** /v NetworkAddress /d AABBCCDDEEFF /f`
 
