@@ -9,7 +9,7 @@ The second step is finding the driver number of your network card. This can be d
 
 `_reg add HKEY_LOCAL_MACHINESYSTEMCurrentControlSetControlClass{4D36E972-E325-11CE-BFC1-08002BE10318}_**0004** /v NetworkAddress /d AABBCCDDEEFF /f`
 
-Once you've done that, navigate to the script's directory using the `cd` command. Once you're in the same directory, go ahead and run the script with the command `./windows_mac_spoof.ps1`. You have now successfully spoofed your mac address on Windows. 
+Once you've done that, open PowerShell as an administrator. If you're not an administrator, you will unfroutunately be unable to run this script due to lack of permissions. If you got PowerShell open as an administrator, navigate to the script's directory using the `cd` command. Once you're in the same directory, go ahead and run the Windows script with the command `./windows_mac_spoof.ps1`. You have now successfully spoofed your mac address on Windows. 
 
 If you're having trouble using the `cd` command, I would reccommend watching this video which helps guide you through using the `cd` command: https://www.youtube.com/watch?v=BfXh11ryBJg.
 
