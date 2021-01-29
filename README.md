@@ -1,7 +1,17 @@
 # MacSpoof
 A dumb repository where I tell you how to spoof your mac address.
 
-So step one is figuring out what operating system you have, which should be pretty easy. (This repository doesn't work with Windows, however if you need a guide to changing your mac address for Windows check out this post from gPost: https://www.groovypost.com/howto/change-mac-address-windows-10-why/) If you're using linux, you can just go down to the next line. If you're using MacOS, scroll down a bit and you should see a guide for MacOS users.
+So step one is figuring out what operating system you have, which should be pretty easy. If you're using Windows, just go down a bit, and you should see some directions. If you're using linux, you can just go a bit further down. If you're using MacOS, scroll past the Linux section and you should see a guide for MacOS users.
+
+Windows users:
+
+The second step is finding the driver number of your network card. This can be done using the Registry Editor on Windows. When you get into the Registry Editor, go to this path: `HKEY_LOCAL_MACHINESYSTEMCurrentControlSetControlClass{4D36E972-E325-11CE-BFC1-08002BE10318}`. Under this path, there should be a bunch of folders with numbers on them. Click each one until you find the folder for your network card. Once you do that, change the part of the command in the powershell script that has been highlighted with stars below to match the network driver number: 
+
+`_reg add HKEY_LOCAL_MACHINESYSTEMCurrentControlSetControlClass{4D36E972-E325-11CE-BFC1-08002BE10318}_**0004** /v NetworkAddress /d AABBCCDDEEFF /f`
+
+Once you've done that, navigate to the script's directory using the `cd` command. Once you're in the same directory, go ahead and run the script with the command `./windows_mac_spoof.ps1`. You have now successfully spoofed your mac address on Windows. 
+
+If you're having trouble using the `cd` command, I would reccommend watching this video which helps guide you through using the `cd` command: https://www.youtube.com/watch?v=BfXh11ryBJg.
 
 Linux users:
 
@@ -73,23 +83,20 @@ A prompt should come up for your password. Type your password, then hit enter.
 
 If it says "No such file or directory", you may be in the incorrect directory. Try going back to the last step to find the correct directory. If the output from the terminal says "Operation successful" you have successfully spoofed your mac address on MacOS.
 
-If the terminal says "user is not in the sudoers file. This incident will be reported.", you may not be in the correct user account or you don't have high enough permissions. The problem with this is that you need administrator or root permissions for these scripts to work. Sooo... if you don't have the correct permissions, I'm sorry, but good luck with changing your mac address...
+If the terminal says that you don't have permission to run following script, or your action was not permitted, you may not be in the correct user account or you don't have high enough permissions. The problem with this is that you need administrator or root permissions for these scripts to work. Sooo... if you don't have the correct permissions, I'm sorry, but good luck with changing your mac address...
 
 
-In summary, you just have to run the right script in the right directory with the right permissions. If you don't have the right permissions, it will be a lot harder to spoof your mac address, but I think that it is still possible (don't quote me on that). If you're still having trouble with the directory, try watching this video: https://www.youtube.com/watch?v=FTTr2bjI2UM.
+In summary, you just have to run the right script in the right directory with the right permissions. If you don't have the right permissions, it will be a lot harder to spoof your mac address, but I think that it is still possible (don't quote me on that).
 
 Now if you've read down to this point, you might still be asking for one thing. What if I want to change my mac address more than once?
 
 Well, then you might want to use the python program that is named "generate_mac_address.py". This program will automatically generate a mac address for you which you can replace with the current mac address in the scripts. To run this script, type
 ```bash
-python generate_mac_address.py
+python3 generate_mac_address.py
 ```
-and then press enter. The program should output a string of numbers and letters. If you are on linux, and it outputs an error instead, try running this command using a root account:
+and then press enter. The program should output a string of numbers and/or letters. 
 
-```bash
-sudo apt install python3.8
-```
-Once there are no errors (or if there were no errors in the first place), copy the output, and then open the script you want to modify by double-clicking on it. This should usually bring up the contents of the script in a text editor. Then just highlight the part of the script that seems similar to the output of the program. Or if you are doing this for the first time, just highlight the part that says "aa:bb:cc:dd:ee:ff". Then hit Ctrl-V, and the old mac address should be replaced by the new one generated by the program. Follow the steps to run the script for your operating system again, and you have successfully spoofed your mac address more than once!
+Copy the output, and then open the script you want to modify by double-clicking on it. This should usually bring up the contents of the script in a text editor. Then just highlight the part of the script that seems similar to the output of the program. Then hit Ctrl-V, and the old mac address should be replaced by the new one generated by the program. Follow the steps to run the script for your operating system again, and you have successfully spoofed your mac address more than once!
 
 Thank you for reading and using my repository!
 
